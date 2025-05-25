@@ -51,3 +51,28 @@ function typeWriter() {
 
 
 typeWriter();
+
+
+
+//=====================Section 03====================
+function dynamicImage(){
+  $(window).on("scroll", function () {
+    const sectionTop = $("#section-03").offset().top;
+    const scrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    if (scrollTop + windowHeight > sectionTop) {
+      $("#slide-image").addClass("visible");
+    }else{
+      $("#slide-image").removeClass("visible");
+
+    }
+
+  });
+  
+}
+
+dynamicImage();
+
+//=====================Section 04====================
+
