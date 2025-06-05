@@ -24,14 +24,14 @@ function typeWriter() {
   let charIndex = 0;
   let wordIndex = 0;
 
-  function dynmaicEffectofSkills(){
+  function dynmaicEffectofSkills() {
     const currentWord = mySkills[wordIndex];
 
-    if (charIndex < currentWord.length){
+    if (charIndex < currentWord.length) {
       $("#type-writter").append(currentWord[charIndex]);
-      charIndex += 1
+      charIndex += 1;
       setTimeout(dynmaicEffectofSkills, 100); // Delay b/w each character
-    }else{
+    } else {
       setTimeout(() => {
         $("#type-writter").fadeOut(300, function () {
           $(this).text("").fadeIn();
@@ -39,23 +39,17 @@ function typeWriter() {
           wordIndex = (wordIndex + 1) % mySkills.length;
           dynmaicEffectofSkills();
         });
-
       }, 1000); //Delay b/w words
     }
-
   }
 
   dynmaicEffectofSkills();
-  
 }
-
 
 typeWriter();
 
-
-
 //=====================Section 03====================
-function dynamicImage(){
+function dynamicImage() {
   $(window).on("scroll", function () {
     const sectionTop = $("#section-03").offset().top;
     const scrollTop = $(window).scrollTop();
@@ -63,16 +57,41 @@ function dynamicImage(){
 
     if (scrollTop + windowHeight > sectionTop) {
       $("#slide-image").addClass("visible");
-    }else{
+    } else {
       $("#slide-image").removeClass("visible");
-
     }
-
   });
-  
 }
 
 dynamicImage();
 
-//=====================Section 04====================
+//=====================Section 06====================
+function progressBar() {
+  $(".skill").each(function () {
+    let prgBar = $(this);
+    let $outerCircle = prgBar.find($(".outer-circle"));
+    let $valueText = prgBar.find($(".inner-circle>span"));
 
+    let progressStartValue = 0;
+    let progressEndValue = $valueText.text();
+
+    let progress = setInterval(() => {
+      progressStartValue += 1;
+
+      $valueText.text(`${progressStartValue}%`);
+      let degree = progressStartValue * 3.6; // 100% = 360deg
+      $outerCircle.css(
+        "background",
+        `conic-gradient(
+        rgb(236, 228, 228) ${degree}deg,
+              #1d1b1b ${degree}deg
+                )`
+      );
+      if (progressStartValue >= progressEndValue) {
+        clearInterval(progress);
+      }
+    }, 30);
+  });
+}
+
+progressBar();
