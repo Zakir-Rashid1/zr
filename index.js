@@ -48,6 +48,23 @@ function typeWriter() {
 
 typeWriter();
 
+// Say hello button
+const sayHello = $("#short-desc button");
+sayHello.on("click", () => {
+  $("html, body").animate(
+    {
+      scrollTop: $("#section-09").offset().top,
+    },
+    5000
+  );
+});
+
+// Download CV button
+const downloadCv = $("#download-cv-button");
+downloadCv.on("click", () => {
+  alert("Not availabe yet ☹️, website under maintaince");
+});
+
 //=====================Section 03====================
 function dynamicImage() {
   $(window).on("scroll", function () {
@@ -95,3 +112,5 @@ function progressBar() {
 }
 
 progressBar();
+
+//=====================Section 08====================
