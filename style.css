@@ -298,6 +298,9 @@ ul li a {
         grid-column: span 2;
         margin-top: 90px;
     }
+    #section-01{
+        height: 100%;
+    }
 }
 
 @media (max-width: 430px) {
