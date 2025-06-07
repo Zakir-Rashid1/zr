@@ -85,7 +85,6 @@ ul li a {
 #section-01 {
     background-color: var(--oddSectionBackgroundColor);
     padding: 20px 50px;
-    min-height: 100dvh;
 }
 
 /* +++++++++++++++Child: 01+++++++++++++++ */
@@ -1336,6 +1335,51 @@ ul li a {
 
     #message {
         height: 150px;
+    }
+
+}
+
+
+
+/* =========================Section 10==================== */
+#section-10{
+    background-color: #000;
+    padding: 100px 50px;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 30%;
+}
+
+#footer-sml{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+   
+}
+
+#social-media-icons{
+    justify-content: start;
+}
+
+#main-logo-copyright p{
+    padding-top: 30px;
+    font-size: 1.2rem;
+}
+
+
+
+@media (max-width: 720px) {
+    footer{
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+    }
+    #main-logo-copyright{
+        text-align: center;
     }
 
 }
