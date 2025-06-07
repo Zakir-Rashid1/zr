@@ -117,9 +117,9 @@ progressBar();
 
 
 //=====================Chat button====================
-const chatButton = $(".cht-button");
-chatButton.on("click", () => {
-  alert("Chat Bot Unavailabe");
-});
+// const chatButton = $(".cht-button");
+// chatButton.on("click", () => {
+//   alert("Chat Bot Unavailabe");
+// });
 
 

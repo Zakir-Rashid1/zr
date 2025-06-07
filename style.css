@@ -1383,7 +1383,7 @@ footer{
     #main-logo-copyright{
         text-align: center;
     }
-    #social-media-icons{
+    footer #social-media-icons{
         align-items: center;
         gap: 20px;
 
@@ -1395,10 +1395,6 @@ footer{
 /* Chat button */
 #chat-button{
     display: none;
-    background-color: rgba(28, 3, 3, 0.5);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
     
 }
 
@@ -1409,12 +1405,10 @@ footer{
 
 @media (max-width: 500px) {
     #chat-button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
         position: sticky;
-        bottom: 1dvh;
-        left: 83%;
+        bottom: 10px;
+        left: 90%;
     }
 
 }
