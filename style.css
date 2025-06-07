@@ -1372,6 +1372,8 @@ footer{
 
 
 
+
+
 @media (max-width: 720px) {
     footer{
         flex-direction: column;
@@ -1381,6 +1383,11 @@ footer{
     #main-logo-copyright{
         text-align: center;
     }
+    #social-media-icons{
+        align-items: center;
+        gap: 20px;
+
+    }
 
 }
 
@@ -1388,6 +1395,11 @@ footer{
 /* Chat button */
 #chat-button{
     display: none;
+    background-color: rgba(28, 3, 3, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
 }
 
 .cht-button{
@@ -1397,10 +1409,12 @@ footer{
 
 @media (max-width: 500px) {
     #chat-button{
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: sticky;
-        bottom: 3dvh;
-        left: 85%;
+        bottom: 1dvh;
+        left: 83%;
     }
 
 }

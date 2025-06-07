@@ -113,4 +113,13 @@ function progressBar() {
 
 progressBar();
 
-//=====================Section 08====================
+
+
+
+//=====================Chat button====================
+const chatButton = $(".cht-button");
+chatButton.on("click", () => {
+  alert("Chat Bot Unavailabe");
+});
+
+
