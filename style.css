@@ -1383,3 +1383,24 @@ footer{
     }
 
 }
+
+
+/* Chat button */
+#chat-button{
+    display: none;
+}
+
+.cht-button{
+    color: #80DB66;
+
+}
+
+@media (max-width: 500px) {
+    #chat-button{
+        display: inline-block;
+        position: sticky;
+        bottom: 3dvh;
+        left: 85%;
+    }
+
+}
