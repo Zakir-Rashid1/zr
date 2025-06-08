@@ -6,6 +6,11 @@
     <title>Zakir Rashid</title>
     <!-- Style sheet -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- Import this CDN to use icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <!-- Font awesome -->
     <script
       src="https://kit.fontawesome.com/a65abef0ba.js"
@@ -700,6 +705,7 @@
             id="fname"
             placeholder="Your First Name"
             autocomplete="off"
+            required
           />
           <input
             type="text"
@@ -707,6 +713,7 @@
             id="lname"
             placeholder="Your Last Name"
             autocomplete="off"
+            required
           />
           <input
             type="email"
@@ -714,6 +721,7 @@
             id="email"
             placeholder="Your Email"
             autocomplete="off"
+            required
           />
           <input
             type="text"
@@ -722,6 +730,7 @@
             placeholder="Your Phone"
             inputmode="numeric"
             autocomplete="off"
+            required
           />
           <textarea
             name="message"
@@ -734,6 +743,7 @@
             id="form-submit"
             type="submit"
             value="Submit"
+            required
           />
         </form>
       </div>
@@ -832,10 +842,40 @@
       </footer>
     </div>
 
+    <!-- ===================Chat button and Chat window ================== -->
     <!-- Chat button -->
-      <a id = chat-button href="./chat_window.html" target="_blank">
-        <i class="fa-brands fa-rocketchat fa-2xl fa-beat cht-button" ></i>
-      </a>
+    <button id="chat-button">
+      <i class="fa-brands fa-rocketchat fa-2xl fa-beat cht-button"></i>
+    </button>
+
+    <!-- Chat window -->
+    <div id="chat-window">
+      <!-- Root user -->
+      <div id="root-user">
+        <div class="avatar">
+          <img src="./assets/images/chat_window/mine_avatar.png" alt="" />
+        </div>
+        <div class="user-name">Zakir Rashid</div>
+      </div>
+
+      <!-- Input message box -->
+       <div id="input-msg-box">
+        <input type="text" name="inp-msg-box" id="inp-msg-box">
+        <button type="submit"><img src="./assets/images/chat_window/send_message.png" alt=""></button>
+       </div>
+
+      <!-- Root user's message -->
+      <div id="root-users-message">
+        <div class="avatar">
+          <img src="./assets/images/chat_window/mine_avatar.png" alt="" />
+        </div>
+        <div type="text" class="root-message">
+          Hello, how can i help you?
+
+        </div>
+        
+      </div>
+    </div>
 
     <!-- Js and JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
