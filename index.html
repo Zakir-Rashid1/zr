@@ -698,7 +698,7 @@
         <hr id="cnt-hr-line" style="width: 35%; border-color: #80db66" />
 
         <!-- Contact from -->
-        <form id="cnt-form" action="">
+        <form id="cnt-form" action="#">
           <input
             type="text"
             name="fname"
@@ -739,6 +739,7 @@
             placeholder="Start writing message here"
           ></textarea>
           <input
+            id="submit-form-button"
             class="button-style-say-hello"
             id="form-submit"
             type="submit"
@@ -856,24 +857,31 @@
           <img src="./assets/images/chat_window/mine_avatar.png" alt="" />
         </div>
         <div class="user-name">Zakir Rashid</div>
+        <i class="fa-solid fa-xmark fa-xl close-chat-button"></i>
       </div>
 
       <!-- Input message box -->
-       <div id="input-msg-box">
-        <input type="text" name="inp-msg-box" id="inp-msg-box">
-        <button type="submit"><img src="./assets/images/chat_window/send_message.png" alt=""></button>
-       </div>
+      <div id="input-msg-box">
+        <input type="text" name="inp-msg-box" id="inp-msg-box" />
+        <button type="submit">
+          <img src="./assets/images/chat_window/send_message.png" alt="" />
+        </button>
+      </div>
 
       <!-- Root user's message -->
       <div id="root-users-message">
         <div class="avatar">
           <img src="./assets/images/chat_window/mine_avatar.png" alt="" />
         </div>
-        <div type="text" class="root-message">
-          Hello, how can i help you?
+        <div type="text" class="root-message">Hello, how can i help you?</div>
+      </div>
 
+      <!-- Other user's message -->
+      <div id="other-users-message">
+        <div type="text" class="users-message">I need help regarding my website that i created last year.</div>
+        <div class="avatar">
+          <img src="./assets/images/chat_window/mine_avatar.png" alt="" />
         </div>
-        
       </div>
     </div>
 

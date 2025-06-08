@@ -113,7 +113,11 @@ function progressBar() {
 
 progressBar();
 
-
+//=====================Section 09====================
+const submitForm = $("#submit-form-button");
+submitForm.on("click", () => {
+  alert("Data Received Sucessfully!✅");
+});
 
 
 //=====================Chat button====================
@@ -124,3 +128,10 @@ chatButton.on("click", () => {
 });
 
 
+
+const closeChatButton = $(".close-chat-button");
+closeChatButton.on("click", () => {
+    $("#chat-window").fadeOut(2000, () => {
+      $(this).css({"display": none});
+    })
+});
